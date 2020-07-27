@@ -1,0 +1,380 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+}
+html{
+    scroll-behavior: smooth;
+}
+nav{
+    font-family: 'Montserrat',sans-serif;
+    background-color: teal;
+    color: #efe;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    min-height: 8vh;
+}
+
+nav h1 a{
+    margin-left: 20px;
+}
+
+.nav-links{
+    font-size: 19px;
+    display: flex;
+    min-width: 40%;
+    justify-content: space-around;
+    list-style: none;
+}
+.nav-links li a,nav h1 a{
+    text-decoration: none;
+    color: #efe;
+
+}
+.nav-links li a::after{
+    content: "";
+    display: block;
+    transition: 0.5s;
+    height: 15%;
+    width: 0%;
+    background-color: #efe;
+}
+.nav-links li a:hover::after{
+    width: 100%;
+}
+
+
+.burger{
+    display: none;
+    cursor: pointer;
+    
+}
+.burger div{
+    background-color: #efe;
+    height: 3px;
+    width: 30px;
+    margin: 5px;
+    transition: .5s ease-out;
+    border-radius: 20%;
+}
+
+.burger .dtwo{
+    width: 20px;
+    transform: translateX(10px);
+}
+
+
+.link-shortner{
+    background-color: transparent;
+    padding: 20px 10px;
+    margin: auto;
+    width: 70%;
+    margin-top: 30px;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 10px 30px -10px;
+}
+.link-shortner:hover{
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 30px -10px; 
+}
+.link-shortner h1{
+    color: rgb(109, 107, 107);
+    
+}
+.input-tips-wrapper{
+    margin-top: 20px;
+}
+.tips{
+    margin: 20px 30px;
+    font-size: 20px;
+    letter-spacing: 2px;
+}
+
+.result{
+    background-color: #bebebe;
+    color: #fff;
+    width: 100%;
+    padding: 10px 20px;
+    margin: 10px auto;
+    border-radius: 10px;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    display: none;
+}
+
+#loader{
+    display: none;
+}
+.abc{
+    display: flex;
+}
+.result a{
+    text-decoration: none;
+    color: #30336b;
+    margin: 10px auto;
+}
+.result h3{
+    margin: 10px;
+}
+
+#user_link{
+    width: 50%;
+    height: 40px;
+    border: 1px solid rgb(221, 221, 221);
+    border-radius: 5px;
+    outline: none;
+    padding: 5px 20px;
+    font-size: 18px;
+}
+
+
+form button,.abc button{
+    padding: 10px;
+    outline: none;
+    background-color: rgb(6, 129, 129);
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 18px;
+    letter-spacing: 2px;
+    border-radius: 5px;
+}
+.abc button{
+    font-size: 14x;
+    background-color: #fff;
+    color: #2c3e50;
+}
+
+form button i{
+    margin-left: 5px;
+}
+
+
+#user_link:focus{
+    border: 2px solid rgb(5, 143, 143);
+}
+
+form button:hover{
+    background-color: rgb(5, 143, 143);
+}
+
+form button:focus{
+    background-color: #333;
+}
+.copyBtn:focus{
+    background-color: #ecf0f1;
+}
+
+.some-info{
+    margin: 30px auto;
+    /* background-color: red; */
+    display: flex;
+}
+.part-one,.part-two{
+    padding: 20px;
+    margin: 10px;
+    width: 50%;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 10px 30px -10px;
+}
+
+.some-info h1{
+    color: rgb(117, 109, 109);
+    text-align: center;
+}
+
+.last-info{
+    padding: 20px 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 50px auto;
+}
+
+.all-wrapper{
+    width: 40%;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 10px 30px -10px;
+}
+.all-wrapper:hover{
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 30px -10px; 
+}
+.all-wrapper p{
+    width: 80%;
+    margin: 10px auto;
+
+}
+.all-wrapper img{
+    height: 150px;
+}
+
+footer{
+    background-color: teal;
+    padding: 20px;
+    text-align: center;
+    font-size: 20px;
+    color: #fff;
+}
+.fa-heart{
+    color: #EA4335;
+}
+
+
+
+
+
+
+@media screen and (min-width:800px) and (max-width:940px){
+    .result,.abc{
+        text-align: center;
+        flex-direction: column;
+    }
+}
+
+
+
+@media screen and (max-width:800px){
+    .nav-links{
+        width: 60%;
+    }
+    .link-shortner{
+        width: 90%;
+    }
+    .some-info{
+        font-size: 14px;
+    }
+    .tips{
+        font-size: 14px;
+    }
+    .result,.abc{
+        text-align: center;
+        flex-direction: column;
+    }
+}
+
+
+@media screen and (max-width:500px){
+    .nav-links{
+        position: absolute;
+        flex-direction: column;
+        top: 9vh;
+        width: 100%;
+        left: 0;
+        align-items: center;
+        background-color: #2c3e50;
+        animation: navani 1s  1 forwards ;
+        overflow: hidden;
+        display: none;
+    }
+    .nav-links li a:hover::after{
+        width: 0;
+    }
+    .active{
+        display: flex;
+    }
+    @keyframes navani {
+        from{
+            height: 0;
+        }
+        to{
+            height: 200px;
+        }
+    }
+    .nav-links li:hover{
+        background-color: lightgray;
+    }
+
+    .nav-links li{
+        padding: 10px 0;
+        width: 100%;
+        text-align: center;
+    }
+
+
+    nav {
+        justify-content: space-between;
+    }
+
+    .burger{
+        display: block;
+        
+
+    }
+    nav h1 a{
+        margin: 0;
+    }
+
+    .burger-active .done{
+        transform: rotate(-45deg) translateY(10px);
+        
+    }
+    .burger-active .dtwo{
+        transform: translateX(-20px);
+        opacity: 0;
+    }
+    .burger-active .dthree{
+        transform: rotate(45deg) translateY(-10px);
+    }
+    .some-info{
+        flex-direction: column;
+    }
+    .part-one,.part-two{
+        width: 90%;
+        margin: auto;
+    }
+    .last-info{
+        flex-direction: column;
+    }
+    .all-wrapper{
+        width: 90%;
+        margin: auto;
+    }
+    #user_link{
+        width: 90%;
+        display: block;
+        margin: auto;
+    }
+    .input-tips-wrapper button{
+        margin-top: 5px;
+    }
+    .result,.abc{
+        font-size: 14px;
+        text-align: left;
+        overflow: hidden;
+        word-break: break-all;
+    }
+    
+}
+
+
+/* loader animation css */
+#loader {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 1;
+    width: 150px;
+    height: 150px;
+    margin: -75px 0 0 -75px;
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid #3498db;
+    width: 120px;
+    height: 120px;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+  }
+  
+  @-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }

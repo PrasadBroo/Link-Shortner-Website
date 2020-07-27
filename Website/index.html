@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Nano Link</title>
+</head>
+<body>
+    <nav class="nav">
+        <h1><a href="http://">Nano Link</a></h1>
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#moreinfo">More Info</a></li>
+            <li><a href="#">Api</a></li>
+        </ul>
+        <div class="burger">
+            <div class="done"></div>
+            <div class="dtwo"></div>
+            <div class="dthree"></div>
+        </div>
+    </nav>
+
+    <div class="link-shortner">
+        <h1>Paste Long Url Below</h1>
+        <div class="input-tips-wrapper">
+            <form method="POST">
+                <input type="text" name="fullurl" id="user_link" placeholder="Enter url to shorten..." required>
+                <button type="submit">Shorten<i class="fas fa-link"></i></button>
+            </form>
+        <div class="tips">
+            <p>Nano Link is a free tool to shorten a URL or reduce a link.Use our URL Shortener to create a shortened link making it easy to remember.</p>
+        </div>
+        <div id="loader"></div>
+        <div class="result">
+            <h3 id="full-link">https://youtube.com</h3>
+            <div class="abc">
+                <h3><a href="http://" target="_blank" id="short-link" rel="noopener noreferrer">https://googl.ink/saaja</a></h3>
+                <button class="copyBtn">copy</button>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <div class="some-info" id="about">
+        <div class="part-one">
+            <h1>Simple and fast URL shortener!</h1>
+            <p>ShortURL allows to reduce long links from Facebook, YouTube, Twitter, Linked In and top sites on the Internet, just paste the long URL and click the Shorten URL button. On the next screen, copy the shortened URL and share it on websites, chat and e-mail. After shortening the URL, check how many clicks it received.</p>
+        </div>
+        <div class="part-two">
+            <h1>Shorten, share and track</h1>
+            <p>Your shortened URLs can be used in publications, advertisements, blogs, forums, e-mails, instant messages, and other locations. Track statistics for your business and projects by monitoring the number of hits from your URL with the click counter, you do not have to register.</p>
+        </div>
+    </div>
+
+    <div class="last-info" id="moreinfo">
+        <div class="all-wrapper">
+            <div class="img-text">
+                <img src="https://www.shorturl.at/img/icon-like.png" alt="">
+                <h3>Easy</h3>
+            </div>
+            <p>ShortURL is easy and fast, enter the long link to get your shortened link</p>
+        </div>
+        <div class="all-wrapper">
+            <div class="img-text">
+                <img src="https://www.shorturl.at/img/icon-url.png" alt="">
+                <h3>Shortened</h3>
+            </div>
+            <p>Use any link, no matter what size, ShortURL always shortens</p>
+        </div>
+        <div class="all-wrapper">
+            <div class="img-text">
+                <img src="https://www.shorturl.at/img/icon-secure.png" alt="">
+                <h3>Secure</h3>
+            </div>
+            <p>It is fast and secure, our service have HTTPS protocol and data encryption</p>
+        </div>
+        <div class="all-wrapper">
+            <div class="img-text">
+                <img src="https://www.shorturl.at/img/icon-statistics.png" alt="">
+                <h3>Statistics</h3>
+            </div>
+            <p>Check the amount of clicks that your shortened url received (coming soon...)</p>
+        </div>
+        <div class="all-wrapper">
+            <div class="img-text">
+                <img src="https://www.shorturl.at/img/icon-unique.png" alt="">
+                <h3>Reliable</h3>
+            </div>
+            <p>All links that try to disseminate spam, viruses and malware are deleted</p>
+        </div>
+        <div class="all-wrapper">
+            <div class="img-text">
+                <img src="https://www.shorturl.at/img/icon-responsive.png" alt="">
+                <h3>Devices</h3>
+            </div>
+            <p>Compatible with smartphones, tablets and desktop</p>
+        </div>
+    </div>
+    <footer>
+        <p>© 2020 Nano Link - Tool to shorten a long link.</p>
+    </footer>
+
+
+    <script src="main.js"></script>
+</body>
+</html>
