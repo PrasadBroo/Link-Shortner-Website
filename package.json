@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "main": "server.js",
   "scripts": {
-    "start": "nodemon server.js"
+    "start": "node server.js",
+    "start:dev": "nodemon server.js"
   },
   "author": "Prasad Shinde",
   "license": "MIT",
@@ -11,8 +12,7 @@
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "mongoose": "^5.9.25",
-    "shortid": "^2.2.15",
-    "tailwindcss": "^1.5.2"
+    "shortid": "^2.2.15"
   },
   "devDependencies": {
     "nodemon": "^2.0.4"
