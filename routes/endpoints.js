@@ -14,7 +14,7 @@ router.post('/shortme',async(req,res)=>{
 
     let url = req.body.fullurl;
     // Add your own domain in base_domain
-    let base_domain = 'http://nanolink.ga/'; 
+    let base_domain = 'https://nanoink.herokuapp.com/'; 
     let shortcode = shortId.generate();
 
    await Db.create({FullUrl:url,ShortUrl:shortcode});
