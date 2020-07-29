@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://i.ibb.co/DQpVKXD/open-graph.png" type="image/gif" sizes="16x16">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="stats.css">
+    <title>Nano Link</title>
+</head>
+<body>
+    <nav class="nav">
+        <h1><a href="index.html">Nano Link</a></h1>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="statistics.html">Statistics</a></li>
+        </ul>
+        <div class="burger">
+            <div class="done"></div>
+            <div class="dtwo"></div>
+            <div class="dthree"></div>
+        </div>
+    </nav>
+
+    <div class="link-shortner">
+        <h1>Enter Short Link To Get Visits Count</h1>
+        <div class="input-tips-wrapper">
+            <form method="POST">
+                <input type="text" name="fullurl" id="user_link" placeholder="https://localhost:3000/abcdefg" required>
+                <button type="submit">Submit<i class="fas fa-link"></i></button>
+            </form>
+            <div class="tips">
+                <p>Nano Link is a free tool to shorten a URL or reduce a link.Use our URL Shortener to create a shortened link making it easy to remember.</p>
+            </div>
+            <div id="loader"></div>
+            <div class="result">
+                <div class="info-link rs"><span><b>Link : </b></span> <p> https://localhost:3000/abcdefg</p></div>
+                <div class="visits-info rs"><span><b>Total Clicks : </b></span> <p> 5</p></div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2020 Nano Link - Tool to shorten a long link.</p>
+    </footer>
+
+
+    <script src="stats.js"></script>
+</body>
+</html>

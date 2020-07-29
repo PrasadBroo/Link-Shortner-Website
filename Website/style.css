@@ -104,6 +104,7 @@ nav h1 a{
     text-align: left;
     display: flex;
     justify-content: space-between;
+    overflow: hidden;
     display: none;
 }
 

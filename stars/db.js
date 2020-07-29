@@ -10,6 +10,11 @@ const myStarSchema = new mongoose.Schema({
     ShortUrl:{
         type: String,
         required: true
+    },
+    Visits:{
+        default:0,
+        required: true,
+        type:Number
     }
 });
 

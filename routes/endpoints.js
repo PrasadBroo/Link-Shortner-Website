@@ -28,10 +28,24 @@ router.get('/:shorturl',async (req,res)=>{
     let shortcode = req.params.shorturl;
 
     const gotIt = await Db.findOne({ShortUrl:shortcode}).catch(err=>res.json({Status:'Fail',Warning:'Server Error...'}));
-    if(gotIt == null)return res.status(404).json({Status:'Fail',Warning:'No Url Found'});
-    res.redirect(gotIt.FullUrl);
+    if(gotIt == null)return res.redirect('/');
+
+  gotIt.Visits++;
+  gotIt.save();
+  res.redirect(gotIt.FullUrl);
+    
 });
 
+router.post('/stats',async(req,res)=>{
+
+    let url = req.body.fullurl;
+
+  const info =  await Db.findOne({ShortUrl:url});
+  if(info == null)return res.status(404).json({Status:'Fail',Warning:'No Url Found'});
+
+
+  res.json({Status:'Success',count:info.Visits});
+});
 
 
 

@@ -1,22 +1,19 @@
 const burger = document.querySelector('.burger');
 const navLinks = document.querySelector('.nav-links');
 const form = document.querySelector('form');
-const full_url = document.getElementById('user_link');
-const copy_btn = document.querySelector('.copyBtn');
-const fullLink = document.getElementById('full-link');
-const shortLink = document.getElementById('short-link');
+const shortLink = document.getElementById('user_link');
 const loader = document.getElementById('loader');
 const result = document.querySelector('.result');
+const link_submitted = document.querySelector('.info-link p');
+const link_visits = document.querySelector('.visits-info p');
 
-form.addEventListener('submit',submitForm);
-copy_btn.addEventListener('click',copyLink);
 burger.addEventListener('click',()=>{navLinks.classList.toggle('active');burger.classList.toggle('burger-active')});
-
-
+form.addEventListener('submit',submitForm);
 
 async function submitForm(e){
     e.preventDefault();
-    let fullUrl = full_url.value;
+    let fullUrl = shortLink.value;
+
     if(fullUrl.trim() == ''){
        return alert('plz enter valid url');
     }
@@ -34,21 +31,18 @@ async function submitForm(e){
         }
     }
 
-    const res = await fetch('/shortme',options);
+    const res = await fetch('/stats',options);
     const gotData = await res.json();
     if(gotData.Status == 'Fail'){
         loader.style.display = 'none';
        return alert('Sorry Plz Try Again');
     }
-    fullLink.textContent = gotData.Full_Url;
-    shortLink.textContent = gotData.Short_Url;
-    shortLink.setAttribute('href',gotData.Short_Url);
+    
+    let link_clicks = gotData.count;
+    link_submitted.textContent = shortLink.value;
+    link_visits.textContent = link_clicks;
     loader.style.display = 'none';
     result.style.display = 'flex';
-}
+    
 
-function copyLink(){
-    var copyText = document.getElementById("short-link");
-    navigator.clipboard.writeText(copyText.textContent);
-    alert('Copied Successfully...')
 }
